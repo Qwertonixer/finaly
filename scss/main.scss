@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap');
+@import './bootstrap/bootstrap.scss';
+@import '_header.scss';
+@import '_cards.scss';
+@import '_team.scss';
+@import '_clients.scss';
+@import '_publications.scss';
+@import '_footer.scss';
+@import './services/_services.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0px 30px;
+}

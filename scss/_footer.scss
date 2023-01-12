@@ -1,0 +1,121 @@
+footer {
+    background: #F5F5FA;
+    padding: 30px 0;
+    .footer_divider {
+        border: 2px solid #E6E6F0;
+        margin: 0 30px 30px;
+    }
+    .copyright {
+        grid-area: copyright;
+    }
+}
+.d-grid {
+    display:grid;
+}
+.d-flex{
+    display:flex;
+}
+.footer {
+    flex-direction:column;
+    grid-area: addres;
+    align-items: center;
+    grid-template-areas: "adress" "social" "copyright";
+    span {
+        display: none;
+    }
+    &_location {
+        flex-direction:column;
+        grid-area: adress;
+        align-items: center;
+        &_adress {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #323264;
+            margin-bottom: 10px;
+        }
+        &_on-map {
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #24A3FF;
+            margin-bottom: 20px;
+        }
+    }
+    &_contacts {
+        flex-direction:column;
+        grid-area: social;
+        align-items: center;
+        &_link_fb {
+            margin-bottom: 10px;
+        }
+        &_tel {
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: #46466E;
+            margin-bottom: 10px;
+        }
+        &_mail {
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: #24A3FF;
+            margin-bottom: 30px;
+        }
+    }
+    &_rights {
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #B3B3BA;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        grid-template-areas: "adress copyright"
+        "social social";
+        span {
+            display: grid;
+            grid-area: dot;
+            color: #B3B3BA;
+            font-size: 250%;
+            margin: 0 10px;
+            margin-top: -5px;
+        }
+        &_location {
+            flex-direction: row;
+            grid-area: adress;
+            align-items: center;
+            &_adress,
+            &_on-map {
+                margin: 0;
+            }
+        }
+        &_contacts {
+            flex-direction: row;
+            grid-area: social;
+            align-items: center;
+            &_link_fb,
+            &_tel,
+            &_mail {
+                margin: 0;
+            }
+        }
+        &_rights {
+            text-align: end;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #B3B3BA;
+            margin: 0;
+        }
+    }
+}
